@@ -7,10 +7,30 @@ Let's get you started ⚡️
 ## Installation Guide
 
 import { Steps } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+
+export const exampleCode = `
+#General
+LIVE_PROJECT_PRODUCTION_URL=demo.rapid-ui.com
+
+#Shopify
+SHOPIFY_STORE_URL=yourstore.myshopify.com
+SHOPIFY_STOREFRONT_CLIENT_ACCESS_TOKEN=
+SHOPIFY_NEWSLETTER_ACCESS_TOKEN=
+SHOPIFY_WEBHOOK=
+
+#Resend
+RESEND_API_KEY=
+
+#Facebook
+NEXT_PUBLIC_FACEBOOK_PIXEL_ID=
+FACEBOOK_ACCESS_TOKEN=
+`;
+export const fileName = '.env.local';
 
 <Steps>
 
-1. Create your own repository
+1. Clone the Github repository
 
    Copy the Github url and run in your own terminal to clone the repository.
 
@@ -18,7 +38,17 @@ import { Steps } from '@astrojs/starlight/components';
    git clone https://github.com/Rapid-ui-com/headless-shopify-boilerplate.git
    ```
 
-2. Wrap `<Steps>` around your ordered list items.
+2. Install the dependencies.
+
+   ```sh
+   cd <your-repository-name>
+   npm install
+   ```
+3. Rename the `.env.example` to `.env.local`
+
+   
+
+   <Code code={exampleCode} lang="dotenv" title={fileName} />
 
 </Steps>
 
