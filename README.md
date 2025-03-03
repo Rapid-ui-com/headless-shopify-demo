@@ -1,3 +1,3 @@
-# Headless Shopify Demo 
+# Headless Shopify Docs 
 
-See the demo link: <a href="https://demo.rapid-ui.com">Demo</a>
+See the docs link: <a href="https://docs.rapid-ui.com">Docs</a>
