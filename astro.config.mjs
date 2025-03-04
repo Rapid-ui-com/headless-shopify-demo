@@ -29,20 +29,11 @@ export default defineConfig({
           {
             label: 'Shopify setup',
             items: [
-              {label: "Configuration", slug: "shopify-setup/configure"}
+              {label: "Configuration", slug: "shopify-setup/configure"},
+              {label: "Newsletter API", slug: "shopify-setup/newsletter-api"},
+              {label: "Activate multi language / currencies", slug: "shopify-setup/multiple-markets"}
             ]
-          },
-          {
-              label: 'Guides',
-              items: [
-                  // Each item here is one entry in the navigation menu.
-                  { label: 'Example Guide', slug: 'guides/example' },
-              ],
-          },
-          {
-              label: 'Reference',
-              autogenerate: { directory: 'reference' },
-          },
+          }
 			],
   }), react()],
 
