@@ -10,19 +10,24 @@ import { Steps } from '@astrojs/starlight/components';
 import { Code } from '@astrojs/starlight/components';
 
 export const exampleCode = `
-#General
-LIVE_PROJECT_PRODUCTION_URL=demo.rapid-ui.com
+LIVE_PROJECT_PRODUCTION_URL=yourwebsite.com
 
-#Shopify
+# -----------------------------------------------------------------------------
+# Shopify
+# -----------------------------------------------------------------------------
 SHOPIFY_STORE_URL=yourstore.myshopify.com
 SHOPIFY_STOREFRONT_CLIENT_ACCESS_TOKEN=
 SHOPIFY_NEWSLETTER_ACCESS_TOKEN=
 SHOPIFY_WEBHOOK=
 
-#Resend
+# -----------------------------------------------------------------------------
+# Email (Resend)
+# -----------------------------------------------------------------------------
 RESEND_API_KEY=
 
-#Facebook
+# -----------------------------------------------------------------------------
+# Facebook (Tracking Pixel)
+# -----------------------------------------------------------------------------
 NEXT_PUBLIC_FACEBOOK_PIXEL_ID=
 FACEBOOK_ACCESS_TOKEN=
 `;
@@ -45,6 +50,13 @@ export const fileName = '.env.local';
    npm install
    ```
 3. Rename the `.env.example` to `.env.local`
+
+4. Start the development server
+   Start the development server and open it in your browser at http://localhost:3000
+
+   ```sh
+   npm run dev
+   ```
 
    
 

@@ -27,6 +27,12 @@ export default defineConfig({
             slug: 'installation'
           },
           {
+            label: 'Shopify setup',
+            items: [
+              {label: "Configuration", slug: "shopify-setup/configure"}
+            ]
+          },
+          {
               label: 'Guides',
               items: [
                   // Each item here is one entry in the navigation menu.

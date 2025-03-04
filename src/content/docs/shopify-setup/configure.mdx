@@ -1,0 +1,53 @@
+---
+title: Shopify setup
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+This guide will walk you through everything you need to set up Shopify for a headless integration.
+
+## Signup as partner
+Start by signing up as a <a href="https://www.shopify.com/se/partners" target="_blank">Shopify Partner</a>. This gives you access to create and manage development stores without needing a paid plan. Once your store is ready, you can easily transition it to a live environment.
+
+## Create a development store
+
+<Steps>
+1. Go to **Stores**
+2. Click **Add store** > **Create developemnt store**
+3. Select **Create a store for a client** and fill in the rest of the information
+4. Click **Create development store**
+</Steps>
+
+<Aside type="tip">As a **Shopify Partner**, you can earn an additional **20%** in recurring revenue as an affiliate when you transfer a development store to a client—calculated based on their selected plan.</Aside>
+
+Now your development store is ready to use.
+
+## Get storefront API keys
+Get the storefron API keys to access all the data from the NextJS frontent.
+
+<Steps>
+1. Go to your Shopify admin panel
+2. Navigate to Settings > Apps and sales channels
+3. Click Create an app
+4. Name your app (e.g., "Headless")
+5. Click Configure Storefront API scopes
+6. Enable necessary permissions:
+
+    `unauthenticated_read_product_listings`
+    `unauthenticated_read_product_inventory`
+    `unauthenticated_read_customer_tags`
+    `unauthenticated_read_content`
+7. Save and install the app.
+8. Under **API Credentials**, copy the Storefront **API Access Token** (this will be used in your Next.js app).
+9. Copy the **API Access Token** and paste it to the `.env.local` for `SHOPIFY_STOREFRONT_CLIENT_ACCESS_TOKEN`
+</Steps>
+
+Your store is now connected and you should be able to see your products in the frontend.
+
+
+
+
+
+
