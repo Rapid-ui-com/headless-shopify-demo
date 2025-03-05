@@ -33,6 +33,10 @@ export default defineConfig({
               {label: "Newsletter API", slug: "shopify-setup/newsletter-api"},
               {label: "Activate multi language / currencies", slug: "shopify-setup/multiple-markets"}
             ]
+          },
+          {
+            label: "Facebook Pixel",
+            slug: "facebook"
           }
 			],
   }), react()],

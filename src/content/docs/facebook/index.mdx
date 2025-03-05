@@ -1,0 +1,42 @@
+---
+title: Facebook Pixel Tracking
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+This boilerplate includes all the essential events, such as `AddToCart`, `Purchase`, and `PageView`. Follow this guide to integrate Facebook Pixel into your store.
+
+<img 
+  src="../src/assets/facebook-events.png"
+/>
+
+## Setup events manager
+Setup the Facebook event manager to connect all the events. This will be used by the Meta Pixel when running Facebook Ads.
+<Steps>
+1. Create a Facebook business account.
+2. Go to https://business.facebook.com/events_manager2 and create a new **data source**
+3. Copy the **Dataset ID** and paste it to `NEXT_PUBLIC_FACEBOOK_PIXEL_ID`.
+4. Go to the **Settings** tab > **Traffic Permissions - Websites** 
+5. Add you domain name to allow Facebook to track events from your website.
+6. Go to **Overview** tab and click **Manage Integrations** under **Active intigrations**
+7. Click **Add New Integration** > **Conversions API** > **Set up**
+8. Select **Set up manually** > **Next** > **Conversions API** > **Next** > **Finish**
+9. Click the **Manage Integrations** again > **Manage** > **Start sending events from server**
+10. Scroll down to **Generate an Access Token** > press **Generate Acccess Token** > copy the token and add it to `FACEBOOK_ACCESS_TOKEN`
+</Steps>
+
+Now the events should be intigrated to NextJS. You can now try the event from your whitelisted url from step .5.
+
+<Aside type="note">Install the <a href="https://chromewebstore.google.com/detail/meta-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc" target="_blank">**Meta Pixel Helper**</a> to make sure you Facebook events are set up correctly.</Aside>
+<Aside type="caution">Turn off Adblocker plugin when trying out the Pixel events.</Aside>
+
+## Create Shopify webhook
+Create a Shopify webhook to handle the `Purchase` event when a successful order has been made.
+<Steps>
+1. Go to **Settings** > **Notifications** > **Webhooks**
+2. Click **Create webhook** 
+3. Choose the `Order creation` event. Set your URL enpoint (https://yourwebsite.com/api/webhooks/shopify). Select the (latest) API version and click **Save**.
+4. Copy the webhook secret and add it to `SHOPIFY_WEBHOOK`.
+</Steps>

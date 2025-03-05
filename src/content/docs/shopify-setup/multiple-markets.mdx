@@ -1,3 +1,18 @@
---
-title: "Activate multi language / currencies"
---
+---
+title: Activate multi language / currencies
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+<Steps>
+1. Go to **Settings** > **Markets**
+2. Click **Activate local currencies** > **Activate for all markets**
+</Steps>
+
+**Disable the hide comparedAtPrice:**
+<Steps>
+1. Go to **Settings** > **Markets** > **Preferences**
+2. Disable **Compare-at price hiding**
+</Steps>
+<Aside type="note">The Shopify store needs to be published and have a connected payment method for the **cart** and **checkout** to translate currencies.</Aside>
